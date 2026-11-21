@@ -1,0 +1,21 @@
+/* hide the page for a moment while it is being translated (English mode only) */
+html.i18n-pending body{visibility:hidden}
+
+/* ===== English / left-to-right layout ===== */
+[dir=ltr] .hero{background-position:right center}
+[dir=ltr] .hero::after{background:linear-gradient(90deg,#f3f8f4 34%,rgba(243,248,244,.85) 50%,rgba(243,248,244,0) 72%)}
+[dir=ltr] .search{padding:9px 9px 9px 20px}
+[dir=ltr] .track input{text-align:left}
+[dir=ltr] .fee,[dir=ltr] .tbl .fee{text-align:left}
+[dir=ltr] .arr,[dir=ltr] .head .more svg{transform:scaleX(-1)}
+[dir=ltr] .chev{transform:scaleX(-1)}
+[dir=ltr] .r.open .chev{transform:rotate(90deg)}
+[dir=ltr] .terms li{padding:8px 0 8px 26px}
+[dir=ltr] .terms li::before{right:auto;left:0}
+[dir=ltr] .bl li{padding:7px 0 7px 24px}
+[dir=ltr] .bl li::before{right:auto;left:2px}
+[dir=ltr] .tl li::before{right:auto;left:15px}
+[dir=ltr] .rd ul{margin:8px 0 0 20px}
+[dir=ltr] .ri{text-align:left}
+[dir=ltr] .pbar i{background:linear-gradient(90deg,var(--green),#2fd070)}
+[dir=ltr] .fl li{text-align:left}

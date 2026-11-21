@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بوابة السودان للخدمات الحكومية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/lang.css">
+<link rel="icon" href="images/logo.png">
+<script src="js/lang-en.js"></script>
+<script src="js/i18n.js"></script>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span class="rt">بوابتك الرسمية والموحدة للخدمات الحكومية</span>
+  <div class="l"><a href="pages.html?p=faq">مركز المساعدة</a>
+    <button id="lang" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span>English</span></button></div>
+</div></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">
+    <img class="logo-img" src="images/logo.png" alt="شعار جمهورية السودان">
+    <div><b>بوابة السودان</b><small>للخدمات الحكومية</small></div>
+  </a>
+  <nav>
+    <a class="active" href="#services">الخدمات</a><a href="pages.html?p=agencies">الجهات الحكومية</a>
+    <a href="pages.html?p=guide">دليل الاستخدام</a><a href="pages.html?p=about">عن البوابة</a><a href="track.html">تتبع الطلب</a>
+  <a class="m-only" href="#" data-msg="تسجيل الدخول">تسجيل الدخول</a></nav>
+  <div class="actions"><a class="login" href="#" data-msg="تسجيل الدخول">تسجيل الدخول</a><button class="btn" data-msg="إنشاء حساب جديد">إنشاء حساب</button></div>
+<button class="menu-btn" type="button" aria-label="القائمة" aria-expanded="false"><i></i><i></i><i></i></button></div></header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap"><div class="txt">
+    <span class="pill"><i></i>منصة حكومية رسمية</span>
+    <h1>خدمات السودان الحكومية <span>أقرب إليك</span></h1>
+    <p>أنجز معاملاتك الحكومية بسهولة وأمان، واعرف الرسوم والمتطلبات ومدة الإنجاز قبل أن تبدأ.</p>
+    <form class="search" id="searchForm" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="ابحث عن خدمة، مثل: تجديد الجواز" aria-label="ابحث عن خدمة">
+      <button class="btn" type="submit">بحث</button>
+    </form>
+    <div class="ideas"><span>الأكثر بحثاً:</span>
+      <button type="button">شهادة الميلاد</button><button type="button">تجديد الجواز</button><button type="button">مخالفات المرور</button></div>
+  </div></div>
+</div>
+
+<div class="wrap">
+  <div class="track">
+    <div class="lead"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></div>
+      <div><b>تتبّع طلبك</b><small>دون الحاجة لتسجيل الدخول</small></div></div>
+    <form id="trackForm"><label for="ref">رقم الطلب</label><input id="ref" placeholder="مثال: SD-2025-001234" autocomplete="off"><button class="btn outline" type="submit">عرض الحالة</button></form>
+  </div>
+  <div id="trackResult" role="status"></div>
+  <p class="tmore"><a href="track.html">بحث متقدم بالاسم أو الرقم الوطني ←</a></p>
+</div>
+
+<section id="services"><div class="wrap">
+  <div class="head"><div><div class="eyebrow">دليل الخدمات</div><h2>ماذا تريد أن تُنجز؟</h2></div>
+    <a class="more" href="#services">عرض جميع الخدمات <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a></div>
+  <div class="grid" id="cats"></div>
+</div></section>
+
+<section class="popular" id="agencies"><div class="wrap">
+  <div class="eyebrow">وصول أسرع</div><h2>الخدمات الأكثر طلباً</h2>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="tbl" id="tbl"></div>
+</div></section>
+
+<section class="steps" id="steps"><div class="wrap">
+  <div>
+    <div class="eyebrow">رحلة واضحة من البداية</div>
+    <h2>أنجز خدمتك في أربع خطوات بسيطة</h2>
+    <p class="lead">كل ما تحتاجه واضح أمامك: المستندات، الرسوم، المدة، وحالة الطلب لحظة بلحظة.</p>
+    <div id="stepList"></div>
+  </div>
+  <div class="mock" id="mock"></div>
+</div></section>
+</main>
+
+<div class="agents" id="agents"><div class="wrap">
+  <div><div class="eyebrow">لا تملك إنترنت أو وسيلة دفع؟</div><h2>الوكلاء المعتمدون في خدمتك</h2>
+    <p>توجّه إلى أقرب مركز خدمة معتمد، وسيساعدك الوكيل في تقديم طلبك ومتابعته بشفافية.</p></div>
+  <a class="box" href="pages.html?p=agents">
+    <div><b>ابحث عن أقرب وكيل</b><small>حسب الولاية والمحلية</small></div>
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 9l2-5h12l2 5M5 9v11h14V9M9 20v-6h6v6"/></svg></a>
+  <a class="box" href="pages.html?p=contact"><div><b>الدعم والخط الساخن</b><span class="tel">+249 155 000 000</span></div>
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg></a>
+</div></div>
+
+<footer id="about"><div class="wrap">
+  <div class="cols">
+    <div class="about"><a class="logo" href="#top"><img class="logo-img" src="images/logo.png" alt="شعار جمهورية السودان"><b>بوابة السودان</b></a>
+      <p>المنصة الرسمية الموحدة للحصول على الخدمات الحكومية في جمهورية السودان.</p></div>
+    <div><h4>روابط سريعة</h4><ul><li><a href="index.html#services">دليل الخدمات</a></li><li><a href="pages.html?p=agencies">الجهات الحكومية</a></li><li><a href="pages.html?p=centers">مراكز الخدمة</a></li><li><a href="pages.html?p=agents">بوابة الوكلاء</a></li></ul></div>
+    <div><h4>الدعم والمساعدة</h4><ul><li><a href="pages.html?p=faq">الأسئلة الشائعة</a></li><li><a href="pages.html?p=guide">دليل الاستخدام</a></li><li><a href="pages.html?p=contact">تواصل معنا</a></li><li><a href="pages.html?p=report">الإبلاغ عن مشكلة</a></li></ul></div>
+    <div><h4>معلومات قانونية</h4><ul><li><a href="pages.html?p=privacy">سياسة الخصوصية</a></li><li><a href="pages.html?p=terms">الشروط والأحكام</a></li><li><a href="pages.html?p=access">سياسة الوصول</a></li><li><a href="pages.html?p=opendata">البيانات المفتوحة</a></li></ul></div>
+  </div>
+</div>
+<div class="copy">© 2025 بوابة السودان للخدمات الحكومية — جميع الحقوق محفوظة</div></footer>
+
+<button class="fab help" aria-label="المساعدة" data-msg="مرحباً! كيف يمكننا مساعدتك؟"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg></button>
+<button class="fab q" aria-label="اختصارات" data-msg="اختصارات لوحة المفاتيح قريباً">?</button>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/services.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script>I18N.start()</script>
+</body>
+</html>
